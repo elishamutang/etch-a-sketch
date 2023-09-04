@@ -4,7 +4,6 @@ h1 {
 }
 
 #big-con {
-    /* border: 1px solid black; */
     margin: 0 auto;
     width: 435px;
     height: 435px;
@@ -14,8 +13,17 @@ h1 {
 }
 
 .small-con {
-    border: 1px solid red;
+    border: 0.5px solid gainsboro;
+    background-color: white;
     width: 25px;
     height: 25px;
     margin: 0;
+}
+
+#main {
+    background-color: gray;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
