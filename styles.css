@@ -1,0 +1,14 @@
+#big-con {
+    border: 2px solid black;
+    width: 800px;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+    align-items: first baseline;
+}
+
+.small-con {
+    border: 2px solid red;
+    width: 50px;
+    height: 50px;
+}
