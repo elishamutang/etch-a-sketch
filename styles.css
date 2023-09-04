@@ -1,14 +1,22 @@
+h1 {
+    padding: 50px 0;
+    text-align: center;
+}
+
 #big-con {
-    border: 2px solid black;
-    width: 800px;
-    height: 100px;
-    margin: 20px auto;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 435px;
+    height: 435px;
     display: flex;
-    align-items: first baseline;
+    flex-wrap: wrap;
+    flex: 0;
+    overflow: hidden;
 }
 
 .small-con {
-    border: 2px solid red;
-    width: 50px;
-    height: 50px;
+    border: 1px solid red;
+    width: 25px;
+    height: 25px;
+    margin: 0;
 }
