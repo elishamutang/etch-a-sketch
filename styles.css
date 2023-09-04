@@ -9,8 +9,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    background-color: black;
-    border: 2px solid red;
+    border: 2px solid black;
 }
 
 .small-con {
