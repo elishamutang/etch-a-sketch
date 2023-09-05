@@ -4,13 +4,13 @@ h1 {
 }
 
 #big-con {
-    margin: 0 auto;
     width: 500px;
     max-width: 500px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
     border: 2px solid black;
+    justify-content: center;
 }
 
 .small-con {
@@ -18,7 +18,7 @@ h1 {
     background-color: white;
     width: 25px;
     height: 25px;
-    flex: auto;
+    flex-grow: 1;
 }
 
 .small-con:last-child {
