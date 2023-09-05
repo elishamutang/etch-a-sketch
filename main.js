@@ -13,20 +13,17 @@ for (let box of smallBox) {
     box.addEventListener("mousedown", function() {
         isDrawing = true;
         box.style.backgroundColor = "black";
-        console.log(isDrawing)
     })
 
     box.addEventListener("mousemove", function () {
         if (isDrawing) {
             box.style.backgroundColor = "black";
-            console.log(isDrawing)
         }
     })
 
     box.addEventListener("mouseup", function() {
         if (isDrawing) {
             isDrawing = false;
-            console.log(isDrawing);
         }
     })
 }
