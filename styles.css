@@ -6,6 +6,7 @@ h1 {
 #big-con {
     margin: 0 auto;
     width: 500px;
+    max-width: 500px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
