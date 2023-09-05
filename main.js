@@ -1,5 +1,5 @@
 const bigCon = document.getElementById("big-con");
-
+let isDrawing = false;
 
 for (let i=1; i < 257; i++) {
     smallDiv = document.createElement("div");
@@ -10,7 +10,23 @@ for (let i=1; i < 257; i++) {
 const smallBox = document.querySelectorAll(".small-con");
 
 for (let box of smallBox) {
-    box.addEventListener("click", function() {
+    box.addEventListener("mousedown", function() {
+        isDrawing = true;
         box.style.backgroundColor = "black";
+        console.log(isDrawing)
+    })
+
+    box.addEventListener("mousemove", function () {
+        if (isDrawing) {
+            box.style.backgroundColor = "black";
+            console.log(isDrawing)
+        }
+    })
+
+    box.addEventListener("mouseup", function() {
+        if (isDrawing) {
+            isDrawing = false;
+            console.log(isDrawing);
+        }
     })
 }
