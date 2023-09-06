@@ -11,18 +11,17 @@ h1 {
 }
 
 #big-con {
-    width: 832px;
-    height: 832px;
+    width: 800px;
+    height: 800px;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: stretch;
-    flex: 0 0 auto;
+    justify-content: center;
 }
 
 .small-con {
     border: 1px solid rosybrown;
     height: 50px;
     width: 50px;
-    flex: 1 0 auto;
+    box-sizing: border-box;
 }
