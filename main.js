@@ -1,34 +1,51 @@
-// Target big container
-const bigCon = document.getElementById("big-con");
+// Function to change grid size dynamically
+function createGrid(rows, cols) {
+    // Target big container
+    const bigCon = document.getElementById("big-con");
+    // Clear existing grid
+    bigCon.innerHTML = "";
 
+    // Loop to create grid with specified dimensions
+    for (let i=0; i < rows*cols; i++) {
+        smallDiv = document.createElement("div");
+        smallDiv.className = "grid-box";
+        bigCon.appendChild(smallDiv);
+    }
 
-// Loop to create 256 small boxes within 16x16 grid
-for (let i=0; i < 16*16; i++) {
-    smallDiv = document.createElement("div");
-    smallDiv.className = "small-con";
-    bigCon.appendChild(smallDiv);
-}
+    // Update CSS for .grid-box items
+    const boxSize = (800/cols) - 2;
+    const smallBox = document.querySelectorAll(".grid-box");
+    smallBox.forEach((box) => {
+        box.style.width = boxSize + "px";
+        box.style.height = boxSize + "px";
+    });
 
-// Target small boxes to loop through each one and add an event listener
-const smallBox = document.querySelectorAll(".small-con");
-// Used as a flagging point or checkpoint
-let isDrawing = false;
+    // Target small boxes to loop through each one and add an event listener
+    const smallBoxMouse = document.querySelectorAll(".grid-box");
+    // Used as a flagging point or checkpoint
+    let isDrawing = false;
 
-for (let box of smallBox) {
-    box.addEventListener("mousedown", function() {
-        isDrawing = true;
-        box.style.backgroundColor = "black";
-    })
-
-    box.addEventListener("mousemove", function () {
-        if (isDrawing) {
+    for (let box of smallBoxMouse) {
+        box.addEventListener("mousedown", function() {
+            isDrawing = true;
             box.style.backgroundColor = "black";
-        }
-    })
+        })
 
-    box.addEventListener("mouseup", function() {
-        if (isDrawing) {
-            isDrawing = false;
-        }
-    })
-}
+        box.addEventListener("mousemove", function () {
+            if (isDrawing) {
+                box.style.backgroundColor = "black";
+            }
+        })
+
+        box.addEventListener("mouseup", function() {
+            if (isDrawing) {
+                isDrawing = false;
+            }
+        })
+    }
+};
+
+
+
+
+createGrid(16,16);
