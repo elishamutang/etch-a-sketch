@@ -52,4 +52,4 @@ function colorGrid() {
 
 
 
-createGrid(16,16);
+createGrid(16, 16);
