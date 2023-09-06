@@ -13,7 +13,7 @@ function createGrid(rows, cols) {
     }
 
     // Update CSS for .grid-box items
-    const boxSize = (800/cols) - 2;
+    const boxSize = (800/cols);
     const smallBox = document.querySelectorAll(".grid-box");
     smallBox.forEach((box) => {
         box.style.width = boxSize + "px";
