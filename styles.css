@@ -16,12 +16,11 @@ h1 {
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
+    gap: 0;
 }
 
-.small-con {
+.grid-box {
     border: 1px solid rosybrown;
-    height: 50px;
-    width: 50px;
     box-sizing: border-box;
 }
