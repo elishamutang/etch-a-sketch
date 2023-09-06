@@ -1,7 +1,6 @@
 // Target big container
 const bigCon = document.getElementById("big-con");
-// Used as a flagging point or checkpoint
-let isDrawing = false;
+
 
 // Loop to create 256 small boxes within 16x16 grid
 for (let i=0; i < 16*16; i++) {
@@ -12,6 +11,8 @@ for (let i=0; i < 16*16; i++) {
 
 // Target small boxes to loop through each one and add an event listener
 const smallBox = document.querySelectorAll(".small-con");
+// Used as a flagging point or checkpoint
+let isDrawing = false;
 
 for (let box of smallBox) {
     box.addEventListener("mousedown", function() {
