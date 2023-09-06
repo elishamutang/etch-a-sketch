@@ -24,6 +24,7 @@ function createGrid(rows, cols) {
     
 };
 
+// Function to add colors to grid-boxes when clicked.
 function colorGrid() {
     // Target small boxes to loop through each one and add an event listener
     const smallBoxMouse = document.querySelectorAll(".grid-box");
