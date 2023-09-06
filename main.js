@@ -20,6 +20,11 @@ function createGrid(rows, cols) {
         box.style.height = boxSize + "px";
     });
 
+    colorGrid();
+    
+};
+
+function colorGrid() {
     // Target small boxes to loop through each one and add an event listener
     const smallBoxMouse = document.querySelectorAll(".grid-box");
     // Used as a flagging point or checkpoint
@@ -43,8 +48,7 @@ function createGrid(rows, cols) {
             }
         })
     }
-};
-
+}
 
 
 
