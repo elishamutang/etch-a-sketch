@@ -3,33 +3,26 @@ h1 {
     text-align: center;
 }
 
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
 #big-con {
-    width: 500px;
-    max-width: 500px;
+    width: 832px;
+    height: 832px;
+    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
-    border: 2px solid black;
-    justify-content: center;
+    justify-content: stretch;
+    flex: 0 0 auto;
 }
 
 .small-con {
-    border: 2px solid gainsboro;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    flex-grow: 1;
-}
-
-.small-con:last-child {
-    display: none;
-}
-
-#main {
-    background-color: rgb(125, 121, 121);
-    width: 100%;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid rosybrown;
+    height: 50px;
+    width: 50px;
+    flex: 1 0 auto;
 }

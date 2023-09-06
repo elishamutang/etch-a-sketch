@@ -4,7 +4,7 @@ const bigCon = document.getElementById("big-con");
 let isDrawing = false;
 
 // Loop to create 256 small boxes within 16x16 grid
-for (let i=1; i < 257; i++) {
+for (let i=0; i < 16*16; i++) {
     smallDiv = document.createElement("div");
     smallDiv.className = "small-con";
     bigCon.appendChild(smallDiv);
