@@ -51,7 +51,6 @@ function colorGrid() {
     }
 }
 
-
 // Buttons
 const buttons = document.getElementById("buttons");
 
@@ -62,6 +61,23 @@ buttonSelection.forEach((button) => {
     selections.textContent = button;
     selections.className = "selections";
     buttons.append(selections);
+
+    if (selections.textContent == "Reset") {
+        selections.addEventListener("click", function() {
+            let removeColor = document.querySelectorAll(".grid-box");
+            for (let box of removeColor) {
+                box.style.backgroundColor = null;
+            }
+        })
+    } else if (selections.textContent == "Eraser") {
+        selections.addEventListener("click", function() {
+            console.log("Eraser");
+        })
+    } else {
+        selections.addEventListener("click", function() {
+            console.log("Color");
+        })
+    }
 })
 
 
