@@ -3,7 +3,7 @@ Project: Etch-a-Sketch from The Odin Project
 
 
 Features to add
-- Reset button
-- Eraser button
-- Set grid size button
-- Choose colour button
+- Reset button (Done)
+- Eraser button (WIP)
+- Set grid size button (WIP)
+- Choose colour button (WIP)
