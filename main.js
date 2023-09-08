@@ -57,21 +57,23 @@ const buttons = document.getElementById("buttons");
 const buttonSelection = ["Reset", "Eraser", "Color"];
 
 buttonSelection.forEach((button) => {
+    // Create buttons
     let selections = document.createElement("button");
     selections.textContent = button;
     selections.className = "selections";
     buttons.append(selections);
 
+    // Adds logic to each button
     if (selections.textContent == "Reset") {
         selections.addEventListener("click", function() {
-            let removeColor = document.querySelectorAll(".grid-box");
-            for (let box of removeColor) {
+            resetGrid = document.querySelectorAll(".grid-box");
+            for (let box of resetGrid) {
                 box.style.backgroundColor = null;
             }
         })
     } else if (selections.textContent == "Eraser") {
         selections.addEventListener("click", function() {
-            console.log("Eraser");
+            console.log("Eraser"); // WIP
         })
     } else {
         selections.addEventListener("click", function() {
