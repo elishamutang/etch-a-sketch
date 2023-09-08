@@ -52,5 +52,21 @@ function colorGrid() {
 }
 
 
+// Buttons
+const buttons = document.getElementById("buttons");
 
+const buttonSelection = ["Reset", "Eraser", "Color"];
+
+buttonSelection.forEach((button) => {
+    let selections = document.createElement("button");
+    selections.textContent = button;
+    selections.className = "selections";
+    buttons.append(selections);
+})
+
+
+
+
+
+// Creates grid
 createGrid(16, 16);
