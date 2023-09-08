@@ -6,7 +6,7 @@ h1 {
 #main {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     border: 2px solid red;
 }
 
@@ -24,3 +24,21 @@ h1 {
     border: 1px solid rosybrown;
     box-sizing: border-box;
 }
+
+#buttons {
+    border: 1px solid red;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+
+.selections {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+    font-size: 30px;
+}
+
