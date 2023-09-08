@@ -62,25 +62,28 @@ buttonSelection.forEach((button) => {
     selections.textContent = button;
     selections.className = "selections";
     buttons.append(selections);
+    btns(selections);
+})
 
-    // Adds logic to each button
-    if (selections.textContent == "Reset") {
-        selections.addEventListener("click", function() {
+// Button logic
+function btns(slct) {
+    if (slct.textContent == "Reset") {
+        slct.addEventListener("click", function() {
             resetGrid = document.querySelectorAll(".grid-box");
             for (let box of resetGrid) {
                 box.style.backgroundColor = null;
             }
         })
-    } else if (selections.textContent == "Eraser") {
-        selections.addEventListener("click", function() {
+    } else if (slct.textContent == "Eraser") {
+        slct.addEventListener("click", function() {
             console.log("Eraser"); // WIP
         })
     } else {
-        selections.addEventListener("click", function() {
+        slct.addEventListener("click", function() {
             console.log("Color");
         })
     }
-})
+}
 
 
 
