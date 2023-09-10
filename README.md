@@ -6,4 +6,4 @@ Features to add
 - Reset button (Done)
 - Eraser button (WIP)
 - Set grid size button (Done)
-- Choose colour button (WIP)
+- Choose colour button (Done)
