@@ -31,11 +31,11 @@ function createGrid(rows=16, cols=16, color) {
 // Function to add colors to grid-boxes when clicked. Default color set to black.
 function colorGrid(color="#000000") {
 
-    const smallBoxMouse = document.querySelectorAll(".grid-box");
+    const smallBox = document.querySelectorAll(".grid-box");
     // Used as a flagging point or checkpoint
     let isDrawing = false;
 
-    for (let box of smallBoxMouse) {
+    for (let box of smallBox) {
         box.addEventListener("mousedown", function() {
             isDrawing = true;
             box.style.backgroundColor = color;
@@ -58,11 +58,11 @@ function colorGrid(color="#000000") {
 // Eraser function
 function eraserBtn() {
 
-    const smallBoxMouse = document.querySelectorAll(".grid-box");
+    const smallBox = document.querySelectorAll(".grid-box");
 
     let eraserOn = false;
 
-    for (let box of smallBoxMouse) {
+    for (let box of smallBox) {
         box.addEventListener("mousedown", function() {
             eraserOn = true;
             box.style.backgroundColor = null;
