@@ -1,5 +1,5 @@
 // Function to change grid size dynamically
-function createGrid(rows=16, cols=16) {
+function createGrid(rows=16, cols=16, color) {
     // Target big container
     const bigCon = document.getElementById("big-con");
     // Clear existing grid
@@ -20,18 +20,22 @@ function createGrid(rows=16, cols=16) {
         box.style.height = boxSize + "px";
     });
 
-    colorGrid();
+    // If color was chosen, don't reset it to black.
+    if (color) {
+        colorGrid(color);
+    } else {
+        colorGrid();
+    }
+    
     
 };
 
-// Function to add colors to grid-boxes when clicked.
+// Function to add colors to grid-boxes when clicked. Default color set to black.
 function colorGrid(color="#000000") {
     // Target small boxes to loop through each one and add an event listener
     const smallBoxMouse = document.querySelectorAll(".grid-box");
     // Used as a flagging point or checkpoint
     let isDrawing = false;
-
-    console.log(color);
 
     for (let box of smallBoxMouse) {
         box.addEventListener("mousedown", function() {
@@ -73,7 +77,6 @@ const colorInput = document.createElement("input");
 colorInput.setAttribute("type", "color");
 colorInput.setAttribute("id", "colorPicker");
 colorInput.setAttribute("value", "#000000");
-
 document.getElementById("Color").append(colorInput);
 
 // Button logic WIP
@@ -91,7 +94,7 @@ function btns(slct) {
         })
     } else if(slct.textContent == "Eraser") {
         slct.addEventListener("click", function() {
-            eraserBtn(slct);
+            console.log(slct.textContent);
         })
     } else {
         slct.addEventListener("input", function(event) {
@@ -123,7 +126,7 @@ gridValue.innerHTML = "Grid size: " + gridSlider.value + "px";
 gridSlider.addEventListener("input", function() {
     gridValue.innerHTML = "Grid size: " + this.value + "px";
     let gridSize = parseInt(this.value);
-    createGrid(gridSize,gridSize);
+    createGrid(gridSize, gridSize, colorInput.value);
 })
 
 
