@@ -107,12 +107,6 @@ gridSlider.setAttribute("max", "100");
 //Displays slider value
 gridValue.innerHTML = "Grid size: " + gridSlider.value;
 
-// gridSlider.oninput = function () {
-//     gridValue.innerHTML = "Grid size: " + this.value;
-//     let gridSize = parseInt(this.value);
-//     createGrid(gridSize,gridSize);
-// }
-
 gridSlider.addEventListener("input", function() {
     gridValue.innerHTML = "Grid size: " + this.value;
     let gridSize = parseInt(this.value);
