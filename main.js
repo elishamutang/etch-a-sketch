@@ -66,6 +66,7 @@ buttonSelection.forEach((button) => {
     btns(selections);
 })
 
+// Color input to be appended to color button.
 const colorInput = document.createElement("input");
 colorInput.setAttribute("type", "color");
 colorInput.setAttribute("id", "colorPicker");
