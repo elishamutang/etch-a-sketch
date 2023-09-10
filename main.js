@@ -85,20 +85,6 @@ function btns(slct) {
     }
 }
 
-// WIP
-function eraserBtn(eraser) {
-    let eraserOn = true;
-    resetGrid = document.querySelectorAll(".grid-box");
-
-    for (let box of resetGrid) {
-        box.addEventListener("mousedown", function() {
-            box.style.backgroundColor = null;
-        })
-    }
-
-    console.log(eraser.textContent);
-}
-
 
 
 
