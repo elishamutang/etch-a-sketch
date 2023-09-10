@@ -38,6 +38,7 @@ h1 {
     width: 200px;
     padding: 20px;
     font-size: 30px;
+    cursor: pointer;
 }
 
 /* Grid slider styling */
