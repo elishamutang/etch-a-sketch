@@ -82,29 +82,6 @@ function eraserBtn() {
     }
 }
 
-
-// Buttons
-const buttons = document.getElementById("buttons");
-
-const buttonSelection = ["Eraser", "Reset", "Color", "RGB"];
-
-buttonSelection.forEach((button) => {
-    // Create buttons
-    let selections = document.createElement("button");
-    selections.textContent = button;
-    selections.id = button;
-    selections.className = "selections";
-    buttons.append(selections);
-    btns(selections);
-})
-
-// Color input to be appended to color button.
-const colorInput = document.createElement("input");
-colorInput.setAttribute("type", "color");
-colorInput.setAttribute("id", "colorPicker");
-colorInput.setAttribute("value", "#000000");
-document.getElementById("Color").append(colorInput);
-
 // Button logic WIP
 function btns(slct) {
     if (slct.textContent == "Reset") {
@@ -129,9 +106,32 @@ function btns(slct) {
     } else {
         slct.addEventListener("click", function(event) {
             console.log(event.target.textContent);
+            // event.target.style.color = 
         })
     }
 }
+
+// Buttons
+const buttons = document.getElementById("buttons");
+
+const buttonSelection = ["Eraser", "Reset", "Color", "RGB"];
+
+buttonSelection.forEach((button) => {
+    // Create buttons
+    let selections = document.createElement("button");
+    selections.textContent = button;
+    selections.id = button;
+    selections.className = "selections";
+    buttons.append(selections);
+    btns(selections);
+})
+
+// Color input to be appended to color button.
+const colorInput = document.createElement("input");
+colorInput.setAttribute("type", "color");
+colorInput.setAttribute("id", "colorPicker");
+colorInput.setAttribute("value", "#000000");
+document.getElementById("Color").append(colorInput);
 
 // Grid range slider
 const sliderDiv = document.createElement("div");
