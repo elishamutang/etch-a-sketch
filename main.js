@@ -1,5 +1,5 @@
 // Function to change grid size dynamically
-function createGrid(rows, cols) {
+function createGrid(rows=16, cols=16) {
     // Target big container
     const bigCon = document.getElementById("big-con");
     // Clear existing grid
@@ -65,7 +65,7 @@ buttonSelection.forEach((button) => {
     btns(selections);
 })
 
-// Button logic
+// Button logic WIP
 function btns(slct) {
     if (slct.textContent == "Reset") {
         slct.addEventListener("click", function() {
@@ -113,4 +113,4 @@ gridSlider.oninput = function () {
 
 
 // Creates grid
-createGrid(16, 16);
+createGrid();
