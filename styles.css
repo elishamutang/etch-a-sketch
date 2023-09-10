@@ -42,3 +42,21 @@ h1 {
     font-size: 30px;
 }
 
+/* Grid slider styling */
+
+#sliderCon {
+    /* border: 2px solid red; */
+    padding: 0;
+}
+
+#slider {
+    opacity: 0.7;
+    transition: opacity .2s;
+    outline: none;
+    width: 100%;
+}
+
+#slider:hover {
+    opacity: 1;
+}
+
