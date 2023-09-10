@@ -25,21 +25,23 @@ function createGrid(rows=16, cols=16) {
 };
 
 // Function to add colors to grid-boxes when clicked.
-function colorGrid() {
+function colorGrid(color="#000000") {
     // Target small boxes to loop through each one and add an event listener
     const smallBoxMouse = document.querySelectorAll(".grid-box");
     // Used as a flagging point or checkpoint
     let isDrawing = false;
 
+    console.log(color);
+
     for (let box of smallBoxMouse) {
         box.addEventListener("mousedown", function() {
             isDrawing = true;
-            box.style.backgroundColor = "black";
+            box.style.backgroundColor = color;
         })
 
         box.addEventListener("mousemove", function () {
             if (isDrawing) {
-                box.style.backgroundColor = "black";
+                box.style.backgroundColor = color;
             }
         })
 
@@ -70,7 +72,7 @@ buttonSelection.forEach((button) => {
 const colorInput = document.createElement("input");
 colorInput.setAttribute("type", "color");
 colorInput.setAttribute("id", "colorPicker");
-colorInput.setAttribute("value", "#0000000");
+colorInput.setAttribute("value", "#000000");
 
 document.getElementById("Color").append(colorInput);
 
@@ -91,8 +93,9 @@ function btns(slct) {
             eraserBtn(slct);
         })
     } else {
-        slct.addEventListener("click", function(event) {
+        slct.addEventListener("input", function(event) {
             console.log(event.target.value);
+            colorGrid(event.target.value);
         })
     }
 }
