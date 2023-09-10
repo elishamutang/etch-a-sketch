@@ -7,3 +7,4 @@ Features to add
 - Eraser button (WIP)
 - Set grid size button (Done)
 - Choose colour button (Done)
+- Random RGB (WIP)
