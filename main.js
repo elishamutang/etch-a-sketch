@@ -30,7 +30,7 @@ function createGrid(rows=16, cols=16, color) {
 
 // Function to add colors to grid-boxes when clicked. Default color set to black.
 function colorGrid(color="#000000") {
-    
+
     const smallBoxMouse = document.querySelectorAll(".grid-box");
     // Used as a flagging point or checkpoint
     let isDrawing = false;
@@ -86,7 +86,7 @@ function eraserBtn() {
 // Buttons
 const buttons = document.getElementById("buttons");
 
-const buttonSelection = ["Eraser", "Reset", "Color"];
+const buttonSelection = ["Eraser", "Reset", "Color", "RGB"];
 
 buttonSelection.forEach((button) => {
     // Create buttons
@@ -122,9 +122,13 @@ function btns(slct) {
         slct.addEventListener("click", function() {
             eraserBtn();
         })
-    } else {
+    } else if(slct.textContent == "Color") {
         slct.addEventListener("input", function(event) {
             colorGrid(event.target.value);
+        })
+    } else {
+        slct.addEventListener("click", function(event) {
+            console.log(event.target.textContent);
         })
     }
 }
