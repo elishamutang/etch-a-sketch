@@ -54,7 +54,7 @@ function colorGrid() {
 // Buttons
 const buttons = document.getElementById("buttons");
 
-const buttonSelection = ["Eraser", "Reset"];
+const buttonSelection = ["Eraser", "Reset", "Color"];
 
 buttonSelection.forEach((button) => {
     // Create buttons
@@ -65,6 +65,13 @@ buttonSelection.forEach((button) => {
     buttons.append(selections);
     btns(selections);
 })
+
+const colorInput = document.createElement("input");
+colorInput.setAttribute("type", "color");
+colorInput.setAttribute("id", "colorPicker");
+colorInput.setAttribute("value", "#0000000");
+
+document.getElementById("Color").append(colorInput);
 
 // Button logic WIP
 function btns(slct) {
@@ -78,27 +85,12 @@ function btns(slct) {
                 box.style.backgroundColor = null;
             }
         })
-    } else {
+    } else if(slct.textContent == "Eraser") {
         slct.addEventListener("click", function() {
             eraserBtn(slct);
         })
     }
 }
-
-//Color button
-const colorBtn = document.createElement("button");
-colorBtn.className = "selections";
-colorBtn.id = "Color";
-colorBtn.textContent = "Color";
-buttons.append(colorBtn);
-
-const colorInput = document.createElement("input");
-colorInput.setAttribute("type", "color");
-colorInput.setAttribute("id", "colorPicker");
-colorInput.setAttribute("value", "#0000000");
-
-colorBtn.append(colorInput);
-
 
 // Grid range slider
 const sliderDiv = document.createElement("div");
