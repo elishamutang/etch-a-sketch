@@ -30,7 +30,7 @@ function createGrid(rows=16, cols=16, color) {
 
 // Function to add colors to grid-boxes when clicked. Default color set to black.
 function colorGrid(color="#000000") {
-    // Target small boxes to loop through each one and add an event listener
+    
     const smallBoxMouse = document.querySelectorAll(".grid-box");
     // Used as a flagging point or checkpoint
     let isDrawing = false;
