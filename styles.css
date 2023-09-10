@@ -88,3 +88,10 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
+
+/* RGB */
+
+#RGB {
+    background-image: linear-gradient(to right, red, blue, green);
+    color: whitesmoke;
+}
