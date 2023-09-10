@@ -60,6 +60,7 @@ buttonSelection.forEach((button) => {
     // Create buttons
     let selections = document.createElement("button");
     selections.textContent = button;
+    selections.id = button;
     selections.className = "selections";
     buttons.append(selections);
     btns(selections);
@@ -83,6 +84,20 @@ function btns(slct) {
         })
     }
 }
+
+//Color button
+const colorBtn = document.createElement("button");
+colorBtn.className = "selections";
+colorBtn.id = "Color";
+colorBtn.textContent = "Color";
+buttons.append(colorBtn);
+
+const colorInput = document.createElement("input");
+colorInput.setAttribute("type", "color");
+colorInput.setAttribute("id", "colorPicker");
+colorInput.setAttribute("value", "#0000000");
+
+colorBtn.append(colorInput);
 
 
 // Grid range slider

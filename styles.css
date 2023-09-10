@@ -71,3 +71,12 @@ h1 {
     cursor: pointer;
     background: salmon;
 }
+
+/* Color button */
+
+#colorPicker {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+}
