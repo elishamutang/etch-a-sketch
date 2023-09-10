@@ -128,6 +128,5 @@ gridSlider.addEventListener("input", function() {
 })
 
 
-
 // Creates grid
 createGrid();
