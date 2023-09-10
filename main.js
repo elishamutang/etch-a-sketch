@@ -55,6 +55,34 @@ function colorGrid(color="#000000") {
     }
 }
 
+// Eraser function
+function eraserBtn() {
+
+    const smallBoxMouse = document.querySelectorAll(".grid-box");
+
+    let eraserOn = false;
+
+    for (let box of smallBoxMouse) {
+        box.addEventListener("mousedown", function() {
+            eraserOn = true;
+            box.style.backgroundColor = null;
+        })
+
+        box.addEventListener("mousemove", function () {
+            if (eraserOn) {
+                box.style.backgroundColor = null;
+            }
+        })
+
+        box.addEventListener("mouseup", function() {
+            if (eraserOn) {
+                eraserOn = false;
+            }
+        })
+    }
+}
+
+
 // Buttons
 const buttons = document.getElementById("buttons");
 
@@ -92,7 +120,7 @@ function btns(slct) {
         })
     } else if(slct.textContent == "Eraser") {
         slct.addEventListener("click", function() {
-            console.log(slct.textContent);
+            eraserBtn();
         })
     } else {
         slct.addEventListener("input", function(event) {
