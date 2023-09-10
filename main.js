@@ -54,7 +54,7 @@ function colorGrid() {
 // Buttons
 const buttons = document.getElementById("buttons");
 
-const buttonSelection = ["Eraser", "Color", "Reset"];
+const buttonSelection = ["Eraser", "Reset"];
 
 buttonSelection.forEach((button) => {
     // Create buttons
@@ -77,13 +77,9 @@ function btns(slct) {
                 box.style.backgroundColor = null;
             }
         })
-    } else if (slct.textContent == "Eraser") {
-        slct.addEventListener("click", function() {
-            eraserBtn(slct);
-        })
     } else {
         slct.addEventListener("click", function() {
-            console.log("Color");
+            eraserBtn(slct);
         })
     }
 }
