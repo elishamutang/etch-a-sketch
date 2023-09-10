@@ -106,9 +106,17 @@ function btns(slct) {
     } else {
         slct.addEventListener("click", function(event) {
             console.log(event.target.textContent);
-            // event.target.style.color = 
         })
     }
+}
+
+// Randomise RGB values
+function randomRGB() {
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    let rgbRandom = `rgb(${r},${g},${b})`;
+    return rgbRandom;
 }
 
 // Buttons
@@ -150,7 +158,7 @@ gridSlider.setAttribute("value", "16");
 gridSlider.setAttribute("min", "1");
 gridSlider.setAttribute("max", "64");
 
-//Displays slider value
+// Displays slider value
 gridValue.innerHTML = "Grid size: " + gridSlider.value + "px";
 
 gridSlider.addEventListener("input", function() {
