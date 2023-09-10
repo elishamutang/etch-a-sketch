@@ -86,6 +86,29 @@ function btns(slct) {
 }
 
 
+// Grid range slider
+const sliderDiv = document.createElement("div");
+sliderDiv.setAttribute("id", "sliderCon");
+sliderDiv.setAttribute("class", "selections");
+buttons.append(sliderDiv);
+
+const gridSlider = document.createElement("input");
+gridSlider.id = "slider";
+const gridValue = document.createElement("p");
+sliderDiv.append(gridSlider);
+sliderDiv.append(gridValue);
+
+gridSlider.setAttribute("type", "range");
+gridSlider.setAttribute("value", "16");
+gridSlider.setAttribute("min", "1");
+gridSlider.setAttribute("max", "100");
+
+//Displays slider value
+gridValue.innerHTML = "Grid size: " + gridSlider.value;
+
+gridSlider.oninput = function () {
+    gridValue.innerHTML = "Grid size: " + this.value;
+}
 
 
 
