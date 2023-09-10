@@ -71,6 +71,8 @@ function btns(slct) {
         slct.addEventListener("click", function() {
             resetGrid = document.querySelectorAll(".grid-box");
             createGrid();
+            gridSlider.value = 16;
+            gridValue.innerHTML = "Grid size: " + gridSlider.value;
             for (let box of resetGrid) {
                 box.style.backgroundColor = null;
             }
@@ -102,7 +104,7 @@ sliderDiv.append(gridValue);
 gridSlider.setAttribute("type", "range");
 gridSlider.setAttribute("value", "16");
 gridSlider.setAttribute("min", "1");
-gridSlider.setAttribute("max", "100");
+gridSlider.setAttribute("max", "64");
 
 //Displays slider value
 gridValue.innerHTML = "Grid size: " + gridSlider.value;
