@@ -83,6 +83,7 @@ function btns(slct) {
             resetGrid = document.querySelectorAll(".grid-box");
             createGrid();
             gridSlider.value = 16;
+            colorInput.value = "#000000";
             gridValue.innerHTML = "Grid size: " + gridSlider.value + "px";
             for (let box of resetGrid) {
                 box.style.backgroundColor = null;
@@ -94,7 +95,6 @@ function btns(slct) {
         })
     } else {
         slct.addEventListener("input", function(event) {
-            console.log(event.target.value);
             colorGrid(event.target.value);
         })
     }
