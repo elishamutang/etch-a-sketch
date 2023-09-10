@@ -54,7 +54,7 @@ function colorGrid() {
 // Buttons
 const buttons = document.getElementById("buttons");
 
-const buttonSelection = ["Reset", "Eraser", "Color"];
+const buttonSelection = ["Eraser", "Color", "Reset"];
 
 buttonSelection.forEach((button) => {
     // Create buttons
@@ -72,7 +72,7 @@ function btns(slct) {
             resetGrid = document.querySelectorAll(".grid-box");
             createGrid();
             gridSlider.value = 16;
-            gridValue.innerHTML = "Grid size: " + gridSlider.value;
+            gridValue.innerHTML = "Grid size: " + gridSlider.value + "px";
             for (let box of resetGrid) {
                 box.style.backgroundColor = null;
             }
@@ -107,10 +107,10 @@ gridSlider.setAttribute("min", "1");
 gridSlider.setAttribute("max", "64");
 
 //Displays slider value
-gridValue.innerHTML = "Grid size: " + gridSlider.value;
+gridValue.innerHTML = "Grid size: " + gridSlider.value + "px";
 
 gridSlider.addEventListener("input", function() {
-    gridValue.innerHTML = "Grid size: " + this.value;
+    gridValue.innerHTML = "Grid size: " + this.value + "px";
     let gridSize = parseInt(this.value);
     createGrid(gridSize,gridSize);
 })
