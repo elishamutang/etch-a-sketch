@@ -108,6 +108,8 @@ gridValue.innerHTML = "Grid size: " + gridSlider.value;
 
 gridSlider.oninput = function () {
     gridValue.innerHTML = "Grid size: " + this.value;
+    let gridSize = parseInt(this.value);
+    createGrid(gridSize,gridSize);
 }
 
 
