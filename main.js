@@ -90,6 +90,10 @@ function btns(slct) {
         slct.addEventListener("click", function() {
             eraserBtn(slct);
         })
+    } else {
+        slct.addEventListener("click", function(event) {
+            console.log(event.target.value);
+        })
     }
 }
 
