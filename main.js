@@ -92,13 +92,9 @@ function eraserBtn() {
 
 // Button logic WIP
 function btns(slct) {
-    if (slct.textContent == "Reset") {
+    if (slct.textContent == "Clear") {
         slct.addEventListener("click", function() {
             resetGrid = document.querySelectorAll(".grid-box");
-            createGrid();
-            gridSlider.value = 16;
-            colorInput.value = "#000000";
-            gridValue.innerHTML = "Grid size: " + gridSlider.value + "px";
             for (let box of resetGrid) {
                 box.style.backgroundColor = null;
             }
@@ -130,7 +126,7 @@ function randomRGB() {
 // Buttons
 const buttons = document.getElementById("buttons");
 
-const buttonSelection = ["Eraser", "Reset", "Color", "RGB"];
+const buttonSelection = ["Eraser", "Clear", "Color", "RGB"];
 
 buttonSelection.forEach((button) => {
     // Create buttons
