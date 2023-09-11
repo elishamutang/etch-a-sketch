@@ -14,11 +14,16 @@ img {
     margin-top: 8px;
 }
 
+.welcome span {
+    color: salmon;
+}
+
 h1 {
     letter-spacing: 5px;
     font-size: 50px;
     margin: 0;
     align-self: center;
+    letter-spacing: -1.5px;
 }
 
 #author {
