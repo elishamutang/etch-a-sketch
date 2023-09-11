@@ -38,12 +38,20 @@ function colorGrid(color="#000000") {
     for (let box of smallBox) {
         box.addEventListener("mousedown", function() {
             isDrawing = true;
-            box.style.backgroundColor = color;
+            if (color == "RGB") {
+                box.style.backgroundColor = randomRGB();
+            } else {
+                box.style.backgroundColor = color;
+            }
         })
 
         box.addEventListener("mousemove", function () {
             if (isDrawing) {
-                box.style.backgroundColor = color;
+                if (color == "RGB") {
+                    box.style.backgroundColor = randomRGB();
+                } else {
+                    box.style.backgroundColor = color;
+                }
             }
         })
 
@@ -105,7 +113,7 @@ function btns(slct) {
         })
     } else {
         slct.addEventListener("click", function(event) {
-            console.log(event.target.textContent);
+            colorGrid(event.target.textContent);
         })
     }
 }
