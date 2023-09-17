@@ -2,7 +2,7 @@
 Project: Etch-a-Sketch from The Odin Project
 
 
-Features to add
+Features added
 - Reset button (Done)
 - Eraser button (Done)
 - Set grid size button (Done)
